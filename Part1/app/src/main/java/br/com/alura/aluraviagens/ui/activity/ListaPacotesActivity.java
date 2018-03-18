@@ -13,14 +13,20 @@ import br.com.alura.aluraviagens.ui.adapter.ListaPacotesAdapter;
 
 public class ListaPacotesActivity extends AppCompatActivity {
 
+    public static final String TITULO_APPBAR = "Pacotes";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_pacotes);
-        ListView listaPacotes = findViewById(R.id.lista_pacote_listview);
 
+        setTitle(TITULO_APPBAR);
+        configuraLista();
+    }
+
+    private void configuraLista() {
+        ListView listaPacotes = findViewById(R.id.lista_pacote_listview);
         List<Pacote> pacotes = new PacoteDAO().lista();
-        
         listaPacotes.setAdapter(new ListaPacotesAdapter(pacotes, this));
     }
 }
