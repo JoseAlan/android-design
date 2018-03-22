@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.alura.aluraviagens.ui.activity.ResumoPacoteActivity">
+
+    <ImageView
+        android:id="@+id/resumo_pacote_imagem"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        app:srcCompat="@drawable/sao_paulo_sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/imagem"/>
+    <TextView
+        android:id="@+id/resumo_pacote_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        tools:text="Sao Paulo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/resumo_pacote_imagem"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_dias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        tools:text="2 dias"
+        app:layout_constraintStart_toStartOf="@id/resumo_pacote_local"
+        app:layout_constraintTop_toBottomOf="@id/resumo_pacote_local"/>
+
+    <TextView
+        android:id="@+id/resumo_pacote_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        tools:text="08/12 - 10/12 de 2018"
+        app:layout_constraintStart_toStartOf="@id/resumo_pacote_dias"
+        app:layout_constraintTop_toBottomOf="@id/resumo_pacote_dias"
+        app:layout_constraintEnd_toStartOf="@id/resumo_pacote_preco"/>
+
+    <TextView
+        android:id="@+id/resumo_pacote_preco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text = "R$ 243,99"
+        android:textAlignment="textEnd"
+        android:layout_gravity="end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintStart_toEndOf="@id/resumo_pacote_data"
+        app:layout_constraintBottom_toBottomOf="@id/resumo_pacote_data"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/resumo_pacote_preco_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preço final:"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/resumo_pacote_preco"
+        app:layout_constraintEnd_toEndOf="@id/resumo_pacote_preco"/>
+
+    <Button
+        android:id="@+id/resumo_pacote_botao_realiza_pagamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Realizar pagamento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:background="@drawable/botao_redondo_laranja"
+        android:textColor="@android:color/white"/>
+
+</android.support.constraint.ConstraintLayout>
